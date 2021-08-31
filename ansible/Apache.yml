@@ -1,0 +1,7 @@
+---  
+-
+  become: true
+  become_user: root
+  hosts: webservers
+  roles: 
+    - apache  

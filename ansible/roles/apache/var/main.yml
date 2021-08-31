@@ -1,0 +1,3 @@
+# vars file for new-role-apache
+dest_path: /var/www/html
+http_port: 8080
