@@ -17,12 +17,12 @@
 
 # Ex 2: A collection of hosts belonging to the 'webservers' group
 
-[webservers]
+## [webservers]
 ## alpha.example.org
 ## beta.example.org
 ## 192.168.1.100
 ## 192.168.1.110
-172.31.33.32
+## 172.31.33.32
 
 # If you have multiple hosts following a pattern you can specify
 # them like this:
@@ -42,5 +42,8 @@
 # leading 0s:
 
 ## db-[99:101]-node.example.com
+
 [webservers]
+
 172.31.33.32
+

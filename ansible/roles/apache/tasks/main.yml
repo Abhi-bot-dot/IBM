@@ -1,24 +1,26 @@
 ---
-- name: Installing  apache
+
+- name: Install apache
   yum:
     name: httpd
     state: present
-	
-- name: start apache
+
+- name: Start apache
   service:
     name: httpd
     state: started
-	
-- name: passing a index.html
+
+- name: Create custom index.html
   copy:
     src: index.html
-    dest: var/www/html
-	
-- name: Reconfiguring apache port number to 8080
+    dest: /var/www/html/index.html
+
+- name: Reconfgire apache port to 8080
   template:
     src: httpd.conf.j2
     dest: /etc/httpd/conf/httpd.conf
-	
-  notify: After changing the port need to restart service.
-    - restart httpd
----
+  notify: 
+    - restart apache
+
+
+...
